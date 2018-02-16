@@ -5,8 +5,8 @@ from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.views.generic import View
 
-from backend.database.DatabaseExtractor import DatabaseExtractor
-from backend.database.TableExtractor import TableExtractor
+from backend.database import DatabaseExtractor, TableExtractor
+
 from common.models import CKANInstance, DBConfig, Resource, ResourceSchedule, DBSchema, DBTable, DBColumn, \
     ResourceDataDictionary
 from frontend.utils import util, util_search

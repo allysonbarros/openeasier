@@ -210,6 +210,7 @@ class ResourceDataDictionary(models.Model):
     class Meta:
         db_table = 'resource_data_dictionary'
 
+
 class ResourceSchedule(models.Model):
     id = models.AutoField(primary_key=True, auto_created=True)
     schedule_date_time = models.DateField()
@@ -226,11 +227,11 @@ class ResourceSchedule(models.Model):
         (STATUS_FAILED, 'FAILED'),
     )
 
-    execution_status = models.CharField (
-            max_length=12,
-            choices=STATUS_TYPES,
-            default=STATUS_SCHEDULED
-        )
+    execution_status = models.CharField(
+        max_length=12,
+        choices=STATUS_TYPES,
+        default=STATUS_SCHEDULED
+    )
 
     resource = models.ForeignKey(
         'Resource',
